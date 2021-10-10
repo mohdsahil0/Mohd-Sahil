@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Birthstone+Bounce&display=swap');
+html,
+body {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+body {
+    font-family: 'Cutive Mono', monospace;
+    font-size: 16px;
+    line-height: 1.5em;
+    font-weight: 400;
+    color: #999;
+    background-color: #000;
+}
+
+
+/* typography */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #fff;
+    font-family: 'Cutive Mono', monospace;
+    font-weight: 400;
+    line-height: 1.25em;
+    margin: 0 0 20px 0;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 25px;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+h6 {
+    font-size: 16px;
+}
+
+p {
+    font-family: 'Cutive Mono', monospace;
+    font-size: 16px;
+    line-height: 1.5em;
+    margin: 0 0 20px;
+    color: #999;
+    font-weight: 400;
+}
+
+#home .nav-bar {
+    padding: 30px 0;
+    align-items: center;
+}
+
+#home .nav-bar .nav-row {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#home .logo a {
+    color: white;
+    text-decoration: none;
+    font-weight: 900;
+    font-family: 'Birthstone Bounce', cursive;
+    font-size: 30px;
+}
+
+#toggle {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex !important;
+    /* background-color: red; */
+    justify-content: center;
+    text-align: center;
+    transition: .2s;
+    color: white;
+    align-items: center;
+    z-index: 99999;
+}
+
+#toggle::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    transition: .2s;
+    transform: translateY(-5px);
+    background: #fff;
+}
+
+#toggle.active::before {
+    transform: translateY(0px) rotate(45deg);
+}
+
+#toggle::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    transition: .2s;
+    transform: translateY(5px);
+    background: #fff;
+}
+
+#toggle.active::after {
+    transform: translateY(0px) rotate(-45deg);
+}
+
+.main-menu {
+    display: block;
+    background: rgba(0, 0, 0, 0.9);
+    /* background-color: rgb(76, 62, 90, .4); */
+    right: 0;
+    /* z-index: 101; */
+    position: fixed;
+    width: 340px;
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+    bottom: 0;
+    top: 0;
+    -webkit-box-shadow: 0 -20px 20px -5px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 -20px 20px -5px rgba(0, 0, 0, 0.05);
+    min-height: 300px;
+    overflow: auto;
+}
+
+.main-menu ul {
+    position: relative;
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+
+.main-menu ul>li {
+    list-style: none;
+    /* visibility: hidden; */
+    /* opacity: 0; */
+    top: -20px;
+    position: relative;
+    text-align: center;
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+    margin: 0 40px;
+    padding: 10px 15px;
+}
+
+
+/* .main-menu ul>li.is-show {
+    visibility: visible;
+    opacity: 1;
+    top: 0px;
+} */
+
+.main-menu ul>li a {
+    color: #999;
+    font-size: 18px;
+    font-family: 'Cutive Mono', monospace;
+    font-weight: 400;
+}
+
+.main-menu ul>li a:hover {
+    color: #fff;
+}
+
+.main-menu ul>li.active a {
+    color: #fff;
+}
+
+.main-menu.main-menu-show {
+    -webkit-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    transform: translateX(0%);
+}
+
+.main-logo-wrap {
+    position: relative;
+    z-index: 1021;
+}
+.dorothea-contact-heading {
+    color: #fff;
+    font-family: 'Cutive Mono', monospace;
+    font-weight: 400;
+    font-size: 20px;
+}
+.dorothea-heading {
+    color: #fff;
+    font-family: 'Cutive Mono', monospace;
+    margin-bottom: 60px;
+    font-weight: 400;
+    font-size: 35px;
+}
+
+.dorothea-heading span {
+    display: block;
+}
+.dorothea-heading-meta {
+    display: block;
+    font-family: 'Cutive Mono', monospace;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #999;
+    font-weight: 400;
+    letter-spacing: 5px;
+    margin-bottom: 5px;
+}
+.dorothea-contact-heading {
+    color: #fff;
+    font-family: 'Cutive Mono', monospace;
+    font-weight: 400;
+    font-size: 20px;
+}
+.contact-container{
+    width: 50% !important;
+}
+b, strong {
+    color: #fff;
+    font-weight: bolder;
+}
+input[type="password"].form-control, input[type="email"].form-control, input[type="text"].form-control, input[type="file"].form-control, textarea.form-control {
+    background: #101010;
+    color: #999;
+    border-radius: 0px;
+}
+
+input[type="password"], input[type="email"], input[type="text"], input[type="file"], textarea {
+    max-width: 100%;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    height: auto;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.5em;
+    font-weight: 400;
+    color: #fff;
+    background-image: none;
+    border: none;
+}
+input[type="submit"], input[type="reset"], input[type="button"], button {
+    text-shadow: none;
+    padding: 12px 30px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-weight: 400;
+    border: none;
+    color: #999;
+    -webkit-transition: background-color .15s ease-out;
+    transition: background-color .15s ease-out;
+    background-color: #101010;
+    margin-top: 15px;
+    font-size: 16px;
+    letter-spacing: 0px;
+    border-radius: 30px;
+}
+input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover, button:hover {
+    background-color: #101010;
+    color: #fff;
+}
+
+.social ul{
+    list-style-type:none;
+    display: inline-flex;
+    text-align: center;
+}
+.social ul li{
+    height: 40px;
+    width:40px;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    margin-top: 10px;
+    margin-right: 20px;
+    position: relative;
+    transition: .4s;
+}
+.social ul li:hover{
+    transform: scale(1.2);
+    border:0px;
+    box-shadow: 2px 2px 5px #101010;
+}
+.social ul li a i{
+    color: #fff;
+    font-size: 20px;
+}
+.social ul li a {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -42%);
+    padding: 5px;
+}
