@@ -4,3 +4,8 @@ $(document).ready(function() {
         $('#toggle').toggleClass("active");
     });
 });
+
+window.addEventListener('scroll', function() {
+    let header = document.querySelector('.nav-bar');
+    header.classList.toggle('scrolling-active', window.scrollY > 200);
+})
