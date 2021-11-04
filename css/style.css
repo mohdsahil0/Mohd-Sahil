@@ -316,6 +316,15 @@ button:hover {
 .btn-cv {
     background: #8a4af3 !important;
     color: #fff !important;
+    transition: .6s !important;
+    /* border: 1px solid #8a4af3; */
+}
+
+.btn-cv:hover {
+    background: #000 !important;
+    color: #8a4af3 !important;
+    border: 1px solid #8a4af3;
+    transform: scale(1.01);
 }
 
 .dorothea-contact-heading {
@@ -798,6 +807,7 @@ ol.comment-list li .children li {
     left: 0;
     width: 100%;
     right: 0;
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .dorothea-team .desc .con {
@@ -855,4 +865,184 @@ ol.comment-list li .children li {
     .dorothea-team .desc span {
         color: #fff;
     }
+}
+
+
+/* **********SERVICES********** */
+
+.services .item {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.services .item:hover img {
+    -webkit-filter: none;
+    filter: none;
+    -webkit-transform: scale(1.09, 1.09);
+    transform: scale(1.09, 1.09);
+    -webkit-filter: brightness(70%);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.services .item:hover .con {
+    bottom: 0;
+}
+
+.services .item img {
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+.services .mtop-60 {
+    margin-top: 60px;
+}
+
+.services .item .con {
+    padding: 30px;
+    position: absolute;
+    bottom: -58px;
+    left: 0;
+    width: 100%;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    text-align: center;
+    z-index: 20;
+    height: auto;
+    box-sizing: border-box;
+    background: -moz-linear-gradient(top, transparent 0, rgba(0, 0, 0, .1) 2%, rgba(0, 0, 0, .75) 90%);
+    background: -webkit-linear-gradient(top, transparent 0, rgba(0, 0, 0, .01) 2%, rgba(0, 0, 0, .75) 90%);
+    background: linear-gradient(to bottom, transparent 0, rgba(0, 0, 0, .01) 2%, rgba(0, 0, 0, .75) 90%);
+}
+
+.services .item .con h6,
+.services .item .con h6 a {
+    position: relative;
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.services .item .con h5,
+.services .item .con h5 a {
+    position: relative;
+    color: #fff;
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+
+.services .item .con p {
+    color: #fff;
+    font-size: 20px;
+}
+
+.services .item .con i {
+    color: #fff;
+    font-size: 18px;
+}
+
+.services .item .con i:hover {
+    color: #fff;
+}
+
+
+/* line animation */
+
+.services .item .line {
+    text-align: center;
+    height: 1px;
+    width: 60px;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    margin: 0 auto 30px;
+}
+
+.services .item:hover .line {
+    width: 100%;
+    transition-property: all;
+    transition-duration: 0.8s;
+    transition-timing-function: ease-in-out;
+}
+
+
+/* prev/next services */
+
+.services-prev-next {
+    padding: 30px 0;
+    border: none;
+    margin-bottom: 60px;
+}
+
+@media (max-width: 576px) {
+    .services-prev-next {
+        text-align: center;
+    }
+    .services-prev-next-left {
+        margin-bottom: 10px;
+    }
+}
+
+.services-prev-next a {
+    display: inline-block;
+    font-size: 14px;
+    color: #999;
+    line-height: 1em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.services-prev-next a i {
+    font-size: 20px;
+}
+
+.services-prev-next a:hover {
+    color: #fff;
+}
+
+.services-prev-next .services-prev-next-left a i {
+    margin-right: 3px;
+    font-size: 9px;
+}
+
+.services-prev-next .services-prev-next-right a i {
+    font-size: 9px;
+    margin-left: 0;
+    margin-left: 3px;
+}
+
+@media screen and (max-width: 768px) {
+    .services .mtop-60 {
+        margin-top: 0;
+    }
+}
+
+
+/* ======= Button style ======= */
+
+a.underline-text {
+    color: #999;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-bottom: 3px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+}
+
+a.underline-text i {
+    font-size: 10px;
+}
+
+a.underline-text:hover {
+    border-bottom: 1px solid transparent;
+    color: #fff;
 }
