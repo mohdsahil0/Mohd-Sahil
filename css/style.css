@@ -5,7 +5,6 @@ body {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
-    font-smoothing: antialiased;
     scroll-behavior: smooth;
 }
 
@@ -16,6 +15,11 @@ body {
     font-weight: 400;
     color: #999;
     background-color: #000;
+}
+
+::selection {
+    color: #fff;
+    background: #000;
 }
 
 
@@ -431,6 +435,8 @@ button:hover {
 .blog-entry .blog-img img {
     position: relative;
     max-width: 100%;
+    width: 100%;
+    height: 450px;
     transition: all 1.5s ease;
 }
 
@@ -1043,6 +1049,476 @@ a.underline-text i {
 }
 
 a.underline-text:hover {
-    border-bottom: 1px solid transparent;
+    border-bottom: 0px;
+    text-decoration: none;
     color: #fff;
+}
+
+
+/* ======= Gallery style ======= */
+
+.dorothea-photos .dorothea-photo-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.dorothea-photos .dorothea-photo-item:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.dorothea-photos .dorothea-photo-item .photo-text-more {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin-top: 30px;
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.dorothea-photos .dorothea-photo-item .photo-text-more .ti-search {
+    color: #fff;
+    font-size: 20px;
+}
+
+.dorothea-photos .dorothea-photo-item .photo-text-more .heading {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+.dorothea-photos .dorothea-photo-item .photo-text-more .meta {
+    color: #cccccc;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.dorothea-photos .dorothea-photo-item img {
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+@media (max-width: 575.98px) {
+    .dorothea-photos .dorothea-photo-item img {}
+}
+
+.dorothea-photos .dorothea-photo-item:hover:after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dorothea-photos .dorothea-photo-item:hover .photo-text-more {
+    margin-top: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/*  add more style  */
+
+@keyframes LHC {
+    from {
+        max-height: 0px;
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        margin-top: -60px;
+        max-height: 100%;
+    }
+}
+
+.dorothea-show-more-container.animated {
+    animation: HCC .5s;
+    animation-fill-mode: both;
+}
+
+@keyframes HCC {
+    from {
+        max-height: 2050px;
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        max-height: 0px;
+    }
+}
+
+
+/* *********** Skills ************ */
+
+.wrapper {
+    width: 50%;
+    min-width: 570px;
+    /* transform: translate(-50%, -50%); */
+}
+
+.wrapper h2 {
+    margin-top: 50px;
+    letter-spacing: 2px;
+    text-align: center;
+    font-size: 33px;
+    font-weight: bold;
+}
+
+.skills {
+    margin-bottom: 30px;
+}
+
+.details {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.bar {
+    position: relative;
+    border: 1px solid #fff;
+    border-radius: 20px;
+}
+
+.bar div {
+    position: relative;
+    width: 0;
+    height: 4px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+#html-bar {
+    animation: html-fill 2s forwards;
+}
+
+@keyframes html-fill {
+    100% {
+        width: 90%;
+    }
+}
+
+#css-bar {
+    animation: css-fill 2s forwards;
+}
+
+@keyframes css-fill {
+    100% {
+        width: 75%;
+    }
+}
+
+#bootstrap {
+    animation: bootstrap-fill 2s forwards;
+}
+
+@keyframes bootstrap-fill {
+    100% {
+        width: 70%;
+    }
+}
+
+#js-bar {
+    animation: js-fill 2s forwards;
+}
+
+@keyframes js-fill {
+    100% {
+        width: 62%;
+    }
+}
+
+#jQuery-bar {
+    animation: jQuery-fill 2s forwards;
+}
+
+@keyframes jQuery-fill {
+    100% {
+        width: 58%;
+    }
+}
+
+
+/* ------Testimnial------ */
+
+.testimonial {
+    border-left: 1px solid #fff;
+    padding: 75px 0 75px 260px;
+    position: relative
+}
+
+.testimonial:before,
+.testimonial:after {
+    content: "";
+    width: 320px;
+    height: 55px;
+    border-right: 1px solid #fff;
+    position: absolute;
+    left: 0;
+}
+
+.testimonial:before {
+    border-top: 1px solid #fff;
+    top: 0;
+}
+
+.testimonial:after {
+    border-bottom: 1px solid #fff;
+    bottom: 0;
+}
+
+.testimonial .pic {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 100px;
+    left: 75px;
+}
+
+.testimonial .pic img {
+    width: 100%;
+    height: auto;
+}
+
+.testimonial .description {
+    font-size: 14px;
+    color: #7a7e82;
+    line-height: 27px;
+    position: relative;
+}
+
+
+/* .testimonial .description:before {
+    content: "";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    top: -70px;
+    left: 0;
+    font-size: 20px;
+    color: #7a7e82;
+} */
+
+.testimonial .testimonial-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.testimonial .post {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.owl-theme .owl-controls {
+    text-align: right;
+    margin-top: 30px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.owl-theme .owl-controls .owl-buttons div {
+    background: #8a4af3;
+    border-radius: 0;
+    opacity: 1;
+    padding: 5px 10px;
+    /* clip-path: polygon(0 0, 0% 100%, 100% 50%); */
+}
+
+.owl-prev:before,
+.owl-next:before {
+    content: "« Prev";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 500;
+    color: #fff;
+    font-family: 'Cutive Mono', monospace;
+}
+
+.owl-next:before {
+    content: "Next »";
+}
+
+@media only screen and (max-width: 990px) {
+    .testimonial {
+        padding: 80px 0 80px 265px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .testimonial {
+        padding: 0;
+        border: none;
+    }
+    .testimonial:before,
+    .testimonial:after {
+        border: none;
+    }
+    .testimonial .pic {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    .testimonial .description {
+        margin-top: 15px;
+    }
+    .testimonial .description:before {
+        content: "";
+    }
+}
+
+
+/* ------------ GAllery--------- */
+
+.dorothea-photos .dorothea-photo-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.dorothea-photos .dorothea-photo-item img {
+    height: 300px;
+    margin-bottom: 30px;
+}
+
+.dorothea-photo-item:hover img {
+    -webkit-filter: none;
+    filter: none;
+    -webkit-transform: scale(1.09, 1.09);
+    transform: scale(1.09, 1.09);
+    -webkit-filter: brightness(70%);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+
+/* .dorothea-photos .dorothea-photo-item:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+    opacity: 0;
+    visibility: hidden;
+} */
+
+.dorothea-photos .dorothea-photo-item .photo-text-more {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin-top: 30px;
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.dorothea-photos .dorothea-photo-item .photo-text-more .ti-search {
+    color: #fff;
+    font-size: 20px;
+}
+
+.dorothea-photos .dorothea-photo-item .photo-text-more .heading {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+.dorothea-photos .dorothea-photo-item .photo-text-more .meta {
+    color: #cccccc;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.dorothea-photos .dorothea-photo-item img {
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+@media (max-width: 575.98px) {
+    .dorothea-photos .dorothea-photo-item img {}
+}
+
+.dorothea-photos .dorothea-photo-item:hover:after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dorothea-photos .dorothea-photo-item:hover .photo-text-more {
+    margin-top: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/*  add more style  */
+
+.flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.dorothea-more-trigger {
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    border: 1px solid #999;
+    margin: 0 auto;
+    position: relative;
+}
+
+.dorothea-more-trigger:hover {
+    background: transparent;
+    border: 1px solid #fff;
+}
+
+.dorothea-more-trigger:hover .plus,
+.dorothea-more-trigger:hover .plus:after {
+    background: #fff;
 }
