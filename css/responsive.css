@@ -1,46 +1,97 @@
-@media screen and (max-width: 1320px) {}
-
-@media screen and (max-width: 1200px) {
-    #home img {
-        width: 500px;
-    }
-}
-
-@media screen and (max-width: 991px) {
-    #home {
-        height: auto;
-    }
-    #home .hero {
-        flex-direction: column-reverse;
-        position: unset;
-        margin: 0 auto;
-        transform: translate(0%, 60px);
-    }
-    #home .hero .left {
-        width: 85%;
-    }
-    #home .hero .left h5 {
-        text-align: justify;
-    }
-}
-
-@media screen and (max-width: 767px) {}
-
-@media screen and (max-width: 580px) {
-    #home img {
-        width: 400px;
-    }
-    #home .hero .left h1 {
-        font-size: 30px;
-    }
-    #home .hero .left h5 {
-        font-size: 18px;
-    }
-    input[type="submit"] {
-        font-size: 12px;
-    }
-}
-
-@media screen and (max-width: 480px) {}
-
-@media screen and (max-width: 400px) {}
+                @media screen and (max-width: 1320px) {}
+                
+                @media screen and (max-width: 1200px) {
+                    #home img {
+                        width: 500px;
+                    }
+                    /* .services .item img {
+        height: 500px;
+    } */
+                }
+                
+                @media screen and (max-width: 991px) {
+                    #home {
+                        height: auto;
+                    }
+                    #home .hero {
+                        flex-direction: column-reverse;
+                        position: unset;
+                        margin: 0 auto;
+                        transform: translate(0%, 60px);
+                    }
+                    #home .hero .left {
+                        width: 85%;
+                    }
+                    #home .hero .left h5 {
+                        text-align: justify;
+                    }
+                    .services .mtop-60 {
+                        margin-top: 0;
+                    }
+                    .team img {
+                        height: 400px;
+                    }
+                }
+                
+                @media screen and (max-width: 767px) {}
+                
+                @media screen and (max-width: 580px) {
+                    #home img {
+                        width: 400px;
+                        margin-left: 30px;
+                    }
+                    #home .hero .left h1 {
+                        font-size: 30px;
+                    }
+                    #home .hero .left h5 {
+                        font-size: 18px;
+                    }
+                    input[type="submit"] {
+                        font-size: 12px;
+                    }
+                    .team img {
+                        height: 300px;
+                    }
+                    #home img {
+                        width: 350px;
+                    }
+                    .social ul {
+                        padding-left: 0;
+                    }
+                    .social ul li {
+                        height: 30px;
+                        width: 30px;
+                        margin-top: 0px;
+                        margin-right: 10px;
+                    }
+                    .social ul li a i {
+                        font-size: 16px;
+                    }
+                }
+                
+                @media screen and (max-width: 480px) {
+                    .team img {
+                        height: 250px;
+                    }
+                    #home img {
+                        width: 325px;
+                    }
+                    #home .hero .left h1 {
+                        font-size: 28px;
+                    }
+                    #home .hero .left h5 {
+                        font-size: 16px;
+                    }
+                    #home .hero {
+                        transform: translate(0%, 80px);
+                    }
+                }
+                
+                @media screen and (max-width: 400px) {
+                    .team img {
+                        height: 210px;
+                    }
+                    #home img {
+                        width: 270px;
+                    }
+                }
