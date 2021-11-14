@@ -321,7 +321,17 @@ button:hover {
     background: #8a4af3 !important;
     color: #fff !important;
     transition: .6s !important;
+    padding: 10px 20px;
+    border-radius: 30px;
     /* border: 1px solid #8a4af3; */
+}
+
+.common-cv {
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: white;
+    transition: .5s all;
 }
 
 .btn-cv:hover {
@@ -1155,8 +1165,8 @@ a.underline-text:hover {
 /* *********** Skills ************ */
 
 .wrapper {
-    width: 50%;
-    min-width: 570px;
+    width: 70%;
+    margin: 0 auto 50px;
     /* transform: translate(-50%, -50%); */
 }
 
@@ -1240,6 +1250,76 @@ a.underline-text:hover {
 @keyframes jQuery-fill {
     100% {
         width: 58%;
+    }
+}
+
+#photo-bar {
+    animation: photo-fill 2s forwards;
+}
+
+@keyframes photo-fill {
+    100% {
+        width: 90%;
+    }
+}
+
+#illus-bar {
+    animation: illus-fill 2s forwards;
+}
+
+@keyframes illus-fill {
+    100% {
+        width: 90%;
+    }
+}
+
+#corel {
+    animation: corel-fill 2s forwards;
+}
+
+@keyframes corel-fill {
+    100% {
+        width: 65%;
+    }
+}
+
+#pre-bar {
+    animation: pre-fill 2s forwards;
+}
+
+@keyframes pre-fill {
+    100% {
+        width: 52%;
+    }
+}
+
+#Audition-bar {
+    animation: Audition-fill 2s forwards;
+}
+
+@keyframes Audition-fill {
+    100% {
+        width: 30%;
+    }
+}
+
+#Adobe-bar {
+    animation: Adobe-fill 2s forwards;
+}
+
+@keyframes Adobe-fill {
+    100% {
+        width: 92%;
+    }
+}
+
+#after-bar {
+    animation: after-fill 2s forwards;
+}
+
+@keyframes after-fill {
+    100% {
+        width: 30%;
     }
 }
 
