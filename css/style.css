@@ -327,11 +327,30 @@ button:hover {
 }
 
 .common-cv {
-    border: 1px solid #fff;
+    /* border: 1px solid #fff;
     padding: 10px 20px;
     border-radius: 30px;
     color: white;
-    transition: .5s all;
+    transition: .5s all; */
+    text-shadow: none;
+    padding: 12px 30px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-weight: 400;
+    border: none;
+    color: #999;
+    -webkit-transition: background-color .15s ease-out;
+    transition: background-color .15s ease-out;
+    background-color: #101010;
+    margin-top: 15px;
+    font-size: 16px;
+    letter-spacing: 0px;
+    border-radius: 30px;
+}
+
+.common-cv:hover {
+    background-color: #101010;
+    color: #fff;
 }
 
 .btn-cv:hover {
