@@ -41,6 +41,9 @@
                     .wrapper {
                         width: 100% !important;
                     }
+                    .contact-container {
+                        width: 85% !important;
+                    }
                 }
                 
                 @media screen and (max-width: 580px) {
